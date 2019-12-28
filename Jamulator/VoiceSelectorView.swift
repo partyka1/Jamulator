@@ -161,23 +161,24 @@ class VoiceSelectorView : UIView {
     midLine.addLine(to: CGPoint(x: rect.size.width, y: rect.origin.y + (rect.size.height / 2)))
     midLine.stroke()
   }
-  
-  func getTextAttributes(fontSize: CGFloat, textColor: UIColor) -> [String: AnyObject] {
-    let paragraphStyle = NSMutableParagraphStyle()
-    paragraphStyle.alignment = .center
-    var textAttributes: [String: AnyObject] = [
-      NSForegroundColorAttributeName: textColor,
-      NSParagraphStyleAttributeName: paragraphStyle
-    ]
-    if let font = UIFont(name: "MarkerFelt-Thin", size: fontSize) {
-      textAttributes[NSFontAttributeName] = font
-    }
-    return textAttributes
-  }
+//
+//  func getTextAttributes(fontSize: CGFloat, textColor: UIColor) -> [String: AnyObject] {
+//    let paragraphStyle = NSMutableParagraphStyle()
+//    paragraphStyle.alignment = .center
+//    var textAttributes: [String: AnyObject] = [
+//      NSForegroundColorAttributeName: textColor,
+//      NSParagraphStyleAttributeName: paragraphStyle
+//    ]
+//    if let font = UIFont(name: "MarkerFelt-Thin", size: fontSize) {
+//      textAttributes[NSFontAttributeName] = font
+//    }
+//    return textAttributes
+//  }
   
   func drawButtonName(name: String, fontSize: CGFloat, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, color: UIColor) {
     let textRect = CGRect(x: x, y: y + ScreenUtils.getAdjustedTextYOffset(), width: width, height: height)
-    String(name).draw(in: textRect, withAttributes: getTextAttributes(fontSize: fontSize, textColor: color))
+//    String(name).draw(in: textRect, withAttributes: getTextAttributes(fontSize: fontSize, textColor: color))
+    String(name).draw(in: textRect)
   }
   
   func drawCategoryButton(button: VoiceCategoryButton, rect: CGRect) {
@@ -228,26 +229,26 @@ class VoiceSelectorView : UIView {
   
   func drawLoadingMessage(rect: CGRect) {
     let textRect = CGRect(x: rect.origin.x, y: rect.height / 6, width: rect.width, height: rect.height / 2)
-    drawLoadingString(text: "Loading Voice " + String(loadingDisplayIndex) + " of " + String(voices.count), rect: textRect, fontSize: ScreenUtils.getAdjustedFontSize() * 3)
+//    drawLoadingString(text: "Loading Voice " + String(loadingDisplayIndex) + " of " + String(voices.count), rect: textRect, fontSize: ScreenUtils.getAdjustedFontSize() * 3)
     let subtextRect = CGRect(x: rect.origin.x, y: rect.origin.y + rect.height / 2, width: rect.width, height: rect.height / 4)
-    drawLoadingString(text: voices[loadingDisplayIndex], rect: subtextRect, fontSize: ScreenUtils.getAdjustedFontSize() * 2)
+//    drawLoadingString(text: voices[loadingDisplayIndex], rect: subtextRect, fontSize: ScreenUtils.getAdjustedFontSize() * 2)
     let subsubtextRect = CGRect(x: rect.origin.x, y: rect.origin.y + (rect.height / 4) * 3, width: rect.width, height: rect.height / 4)
-    drawLoadingString(text: "You can play the piano while you wait, but there's only one voice", rect: subsubtextRect, fontSize: ScreenUtils.getAdjustedFontSize() * 1.5)
+//    drawLoadingString(text: "You can play the piano while you wait, but there's only one voice", rect: subsubtextRect, fontSize: ScreenUtils.getAdjustedFontSize() * 1.5)
   }
   
-  func drawLoadingString(text: String, rect: CGRect, fontSize: CGFloat) {
-    let paragraphStyle = NSMutableParagraphStyle()
-    paragraphStyle.alignment = .center
-    var textAttributes: [String: AnyObject]
-    textAttributes = [
-      NSForegroundColorAttributeName: loadingTextColor,
-      NSParagraphStyleAttributeName: paragraphStyle
-    ]
-    if let font = UIFont(name: "MarkerFelt-Thin", size: fontSize) {
-      textAttributes[NSFontAttributeName] = font
-    }
-    text.draw(in: rect, withAttributes: textAttributes)
-  }
+//  func drawLoadingString(text: String, rect: CGRect, fontSize: CGFloat) {
+//    let paragraphStyle = NSMutableParagraphStyle()
+//    paragraphStyle.alignment = .center
+//    var textAttributes: [String: AnyObject]
+//    textAttributes = [
+//      NSForegroundColorAttributeName: loadingTextColor,
+//      NSParagraphStyleAttributeName: paragraphStyle
+//    ]
+//    if let font = UIFont(name: "MarkerFelt-Thin", size: fontSize) {
+//      textAttributes[NSFontAttributeName] = font
+//    }
+//    text.draw(in: rect, withAttributes: textAttributes)
+//  }
   
   // MARK: - handle touches
   

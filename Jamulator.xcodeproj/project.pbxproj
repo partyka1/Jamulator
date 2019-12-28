@@ -23,22 +23,10 @@
 		369035641F3E755A00E72EDB /* VoiceSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369035631F3E755A00E72EDB /* VoiceSelectorButton.swift */; };
 		369035671F3FBF1000E72EDB /* VoiceCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369035661F3FBF1000E72EDB /* VoiceCategoryButton.swift */; };
 		3690358D1F43A77200E72EDB /* ScreenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690358C1F43A77000E72EDB /* ScreenUtils.swift */; };
-		36DA47311F50C6A300AE58EE /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DA47301F50C6A300AE58EE /* AudioKit.framework */; };
-		36DA47321F50C6A300AE58EE /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36DA47301F50C6A300AE58EE /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6B4A6F3E83859FB79A004EF /* Pods_Jamulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2942ABC083A897657070C7B2 /* Pods_Jamulator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		369035711F4228BF00E72EDB /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				36DA47321F50C6A300AE58EE /* AudioKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		369035721F422EFF00E72EDB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2942ABC083A897657070C7B2 /* Pods_Jamulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jamulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3616ECE01F61E9A300906228 /* AudioCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCommon.swift; sourceTree = "<group>"; };
 		3616ECE21F61EA0B00906228 /* Sequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequencer.swift; sourceTree = "<group>"; };
 		3621D2501F2FA19A00E07518 /* Jamulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jamulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +59,9 @@
 		369035661F3FBF1000E72EDB /* VoiceCategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCategoryButton.swift; sourceTree = "<group>"; };
 		3690358C1F43A77000E72EDB /* ScreenUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenUtils.swift; sourceTree = "<group>"; };
 		36DA47301F50C6A300AE58EE /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		5795C48723B5BD99003B9011 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/AudioKit_For_iOS-gypbfhlmdlcxsshckwcqkfbdzsdj/Build/Products/Debug-iphonesimulator/AudioKit.framework"; sourceTree = "<group>"; };
+		5B4FB8DAC9CF6EE09DCBCE79 /* Pods-Jamulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jamulator.release.xcconfig"; path = "Target Support Files/Pods-Jamulator/Pods-Jamulator.release.xcconfig"; sourceTree = "<group>"; };
+		88C0F3599094E03E2C41CE9D /* Pods-Jamulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jamulator.debug.xcconfig"; path = "Target Support Files/Pods-Jamulator/Pods-Jamulator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DA47311F50C6A300AE58EE /* AudioKit.framework in Frameworks */,
 				3621D2681F2FB11900E07518 /* CoreAudio.framework in Frameworks */,
 				3621D2691F2FB11900E07518 /* CoreMIDI.framework in Frameworks */,
+				B6B4A6F3E83859FB79A004EF /* Pods_Jamulator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +87,7 @@
 				3621D2521F2FA19A00E07518 /* Jamulator */,
 				3621D2511F2FA19A00E07518 /* Products */,
 				3621D2651F2FB11900E07518 /* Frameworks */,
+				40810E018094C87B520180D1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,8 +123,10 @@
 		3621D2651F2FB11900E07518 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5795C48723B5BD99003B9011 /* AudioKit.framework */,
 				3621D2661F2FB11900E07518 /* CoreAudio.framework */,
 				3621D2671F2FB11900E07518 /* CoreMIDI.framework */,
+				2942ABC083A897657070C7B2 /* Pods_Jamulator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +136,15 @@
 			children = (
 			);
 			name = Media;
+			sourceTree = "<group>";
+		};
+		40810E018094C87B520180D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88C0F3599094E03E2C41CE9D /* Pods-Jamulator.debug.xcconfig */,
+				5B4FB8DAC9CF6EE09DCBCE79 /* Pods-Jamulator.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +158,6 @@
 				3621D24C1F2FA19A00E07518 /* Sources */,
 				3621D24D1F2FA19A00E07518 /* Frameworks */,
 				3621D24E1F2FA19A00E07518 /* Resources */,
-				F2ECC297598EEE84FF7CDA60 /* [CP] Embed Pods Frameworks */,
-				008D1C48F3BD33382B4627E0 /* [CP] Copy Pods Resources */,
-				369035711F4228BF00E72EDB /* Embed Frameworks */,
 				369035721F422EFF00E72EDB /* CopyFiles */,
 				369035771F4234DE00E72EDB /* ShellScript */,
 			);
@@ -200,6 +201,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -228,22 +230,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		008D1C48F3BD33382B4627E0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
-			showEnvVarsInLog = 0;
-		};
 		369035771F4234DE00E72EDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,29 +249,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jamulator-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
-			showEnvVarsInLog = 0;
-		};
-		F2ECC297598EEE84FF7CDA60 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -385,7 +358,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -438,7 +411,7 @@
 				SDKROOT = iphoneos;
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -446,8 +419,8 @@
 		};
 		3621D2631F2FA19A00E07518 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C0F3599094E03E2C41CE9D /* Pods-Jamulator.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +428,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/partyka/Library/Developer/Xcode/DerivedData/AudioKit_For_iOS-gypbfhlmdlcxsshckwcqkfbdzsdj/Build/Products/Debug-iphonesimulator/",
+					"$(PROJECT_DIR)/AudioKit",
 				);
 				INFOPLIST_FILE = Jamulator/Info.plist;
 				"INFOPLIST_FILE[sdk=*]" = Jamulator/Info.plist;
@@ -465,14 +440,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		3621D2641F2FA19A00E07518 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4FB8DAC9CF6EE09DCBCE79 /* Pods-Jamulator.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -489,7 +464,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

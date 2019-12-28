@@ -4,6 +4,7 @@
 
 import UIKit
 import AudioKit
+import AudioKitUI
 
 class MIDIInstrumentViewController: UIViewController {
 
